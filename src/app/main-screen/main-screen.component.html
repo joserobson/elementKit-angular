@@ -1,0 +1,50 @@
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Menu Lateral -->
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+        <div class="position-sticky pt-3">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#text-selector">
+                Text-Selector
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#component2">
+                Component 2
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#component3">
+                Component 3
+              </a>
+            </li>
+            <!-- Adicione mais itens de menu conforme necessário -->
+          </ul>
+        </div>
+      </nav>
+  
+      <!-- Conteúdo Principal -->
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <div class="pt-3 pb-2 mb-3">
+          <h2 id="text-selector">Text Selector</h2>          
+          <form [formGroup]="form">
+            <app-text-selector
+              formControlName="selectedTables"
+              [todasAsTabelas]="todos"
+              [tabelasPreSelecionadas]="preSelecionados"
+              [size]="12"
+            ></app-text-selector>
+          </form>        
+          <h2 id="component2">Component 2 Example</h2>
+          <p>Conteúdo do exemplo do componente 2</p>
+  
+          <h2 id="component3">Component 3 Example</h2>
+          <p>Conteúdo do exemplo do componente 3</p>
+  
+          <!-- Adicione mais exemplos conforme necessário -->
+        </div>
+      </main>
+    </div>
+  </div>
+  

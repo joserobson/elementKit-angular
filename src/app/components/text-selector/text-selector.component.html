@@ -1,0 +1,41 @@
+
+<div class="row align-items-center">    
+    <div class="col-sm-5">
+        <h5>Tabelas Disponíveis</h5>            
+        <app-virtual-textarea 
+            #leftTextarea
+            [textArray]="tabelasDisponiveisLadoEsquerdo" 
+            [size]="size"
+            (textArrayChange)="onSelectedTabelasDisponiveis($event)">
+        </app-virtual-textarea>
+    </div>
+
+    <div class="col-sm-2 col-auto text-center">        
+        <button type="button" class="btn btn-primary mb-2" (click)="moveRight()">
+            <i class="bi bi-arrow-right fs-4"></i>
+        </button>
+        <button type="button" class="btn btn-primary mb-2" (click)="moveLeft()">
+            <i class="bi bi-arrow-left fs-4"></i>
+        </button>
+        
+        <button type="button" class="btn btn-primary mb-2" (click)="moveAllRight()" data-bs-toggle="tooltip" title="Mover tudo para a direita">
+            <i class="bi bi-chevron-right fs-4"></i>                
+            <i class="bi bi-chevron-right fs-4"></i>
+        </button>
+
+        <button type="button" class="btn btn-primary" (click)="moveAllLeft()" data-bs-toggle="tooltip" title="Mover tuydo para a esquerda">
+            <i class="bi bi-chevron-left fs-4"></i>                
+            <i class="bi bi-chevron-left fs-4"></i>
+        </button>            
+    </div>    
+    <div class="col-sm-5">
+        <h5>Tabelas Selecionadas</h5>
+                    
+        <app-virtual-textarea 
+            #rightTextarea
+            [size]="size"
+            [textArray]="tabelasEnviadasParaLadoDireito" 
+            (textArrayChange)="onSelectedTabelasSelecionadas($event)">
+        </app-virtual-textarea>
+    </div>
+</div>
